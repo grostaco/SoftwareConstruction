@@ -1,1 +1,1 @@
-A simple item list application
+A simple message board
