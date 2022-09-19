@@ -43,6 +43,19 @@ fn app_list() -> Html {
                 );
                 let res = reqwest::get(&url).await.unwrap();
                 if res.status().as_u16() == 200 {
+                    let about = match reqwest::get(format!(
+                        "https://grostaco.github.io/SoftwareConstruction/assignment{i}/about.txt"
+                    ))
+                    .await
+                    .map(|res| async {
+                        res.text().await.unwrap_or(
+                            "Cannot load the information about this assignment".to_string(),
+                        )
+                    }) {
+                        Ok(text) => text.await,
+                        Err(_) => "Cannot load about.txt".to_string(),
+                    };
+
                     assignments.push(html! {
                         <div class="dflex dflex-col dflex-gap-md" style="margin-top: 2rem;">
                             <div class="dflex dflex-row dflex-gap-md">
@@ -50,7 +63,7 @@ fn app_list() -> Html {
                                 <div class="dflex dflex-col dflex-justify-between">
                                     <div class="dflex dflex-col dflex-gap-sm">
                                         <div class="bold">{{"Assignment 1"}}</div>
-                                        <div>{{"Lorem Ipsum"}}</div>
+                                        <div>{about}</div>
                                     </div>
                                     <div class="dflex dflex-row dflex-gap-sm">
                                         <a href={{url}}>{{"Live Preview"}}</a>
