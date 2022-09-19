@@ -54,7 +54,7 @@ fn app_list() -> Html {
                                     </div>
                                     <div class="dflex dflex-row dflex-gap-sm">
                                         <a href={{url}}>{{"Live Preview"}}</a>
-                                        <a>{{"View Code"}}</a>
+                                        <a href={{format!("https://github.com/grostaco/SoftwareConstruction/tree/main/vue/assignment{i}")}}>{{"View Code"}}</a>
                                     </div>
                                 </div>
                             </div>
