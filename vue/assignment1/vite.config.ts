@@ -12,7 +12,7 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
   },
-  base: "/assignment1",
+  base: "/SoftwareConstruction/assignment1",
   build: {
     outDir: "assignment1"
   }

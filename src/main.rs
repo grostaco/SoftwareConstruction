@@ -37,7 +37,10 @@ fn app_list() -> Html {
             let mut assignments = Vec::new();
             let mut i = 1;
             loop {
-                let url = format!("http://127.0.0.1:5500/assignment{}/index.html", i);
+                let url = format!(
+                    "https://grostaco.github.io/SoftwareConstruction/assignment{}/index.html",
+                    i
+                );
                 let res = reqwest::get(&url).await.unwrap();
                 if res.status().as_u16() == 200 {
                     assignments.push(html! {
