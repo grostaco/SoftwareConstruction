@@ -1,5 +1,3 @@
-use std::env;
-
 use yew::prelude::*;
 use yew_hooks::{use_async_with_options, UseAsyncOptions};
 
@@ -62,7 +60,7 @@ fn app_list() -> Html {
                                 <img src="placeholder.png" width="128px" height="128px"/>
                                 <div class="dflex dflex-col dflex-justify-between">
                                     <div class="dflex dflex-col dflex-gap-sm">
-                                        <div class="bold">{{"Assignment 1"}}</div>
+                                        <div class="bold">{{format!("Assignment {i}")}}</div>
                                         <div>{about}</div>
                                     </div>
                                     <div class="dflex dflex-row dflex-gap-sm">
