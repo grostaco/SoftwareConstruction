@@ -761,6 +761,7 @@ dependencies = [
 name = "software_construction"
 version = "0.1.0"
 dependencies = [
+ "gloo-timers",
  "js-sys",
  "log",
  "reqwest",
@@ -768,6 +769,7 @@ dependencies = [
  "serde_json",
  "thiserror",
  "wasm-logger",
+ "web-sys",
  "yew",
  "yew-hooks",
 ]
