@@ -5,7 +5,10 @@ pub fn nav() -> Html {
     html! {
         <>
         <nav class="navbar dflex-justify-center">
-            <div class="bold font-lg">{{"Software Construction"}}</div>
+            <div class="dflex dflex-col">
+                <div class="bold font-lg">{{"Software Construction"}}</div>
+                <div>{{"Made with Rust!"}}</div>
+            </div>
             <div class="dflex dflex-row dflex-gap-md">
                 <a href="#">{{"Home"}}</a>
                 <a href="https://github.com/grostaco">{{"GitHub"}}</a>
