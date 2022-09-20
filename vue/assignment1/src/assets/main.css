@@ -1,35 +1,81 @@
 @import "./base.css";
+html,
+body {
+    position: relative;
+    min-height: 100%;
+    color: #9eaab7;
+    background-color: #0f1117;
+    margin: 0;
+    font-feature-settings: 'kern';
+    line-break: auto;
+    font-family: 'Wotfard', -apple-system, 'Segoe UI', 'Roboto', 'Ubuntu', 'Cantarell', 'Noto Sans', sans-serif, 'BlinkMacSystemFont', 'Helvetica Neue', 'Arial', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-
-  font-weight: normal;
+* {
+    border-width: 0;
+    border-style: solid;
+    box-sizing: border-box;
 }
 
 a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
+a:visited {
+    color: inherit;
 }
 
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
-}
-
-@media (min-width: 1024px) {
-  body {
+.navbar {
     display: flex;
-    place-items: center;
-  }
+    justify-content: space-between;
+    color: white;
+    padding: 0.75rem;
+    margin: 2rem;
+}
 
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
+.divider {
+    width: 100%;
+    height: 1px;
+    background-color: white;
+}
+
+.main {
+    padding: 2.75rem;
+}
+
+.bold {
+    font-weight: 900;
+}
+
+.font-md {
+    font-size: 1.5rem;
+}
+
+.font-lg {
+    font-size: 2.5rem;
+}
+
+.dflex {
+    display: flex;
+}
+
+.dflex-justify-between {
+    justify-content: space-between;
+}
+
+.dflex-justify-center {
+    align-items: center;
+}
+
+.dflex-gap-sm {
+    gap: 1rem;
+}
+
+.dflex-gap-md {
+    gap: 2.5rem;
+}
+
+.dflex-row {
+    flex-direction: row;
+}
+
+.dflex-col {
+    flex-direction: column;
 }

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import ItemList from "./components/ItemList.vue"
+import ItemList from "./components/ItemList.vue"
 </script>
 
 <script lang="ts">
@@ -11,41 +11,34 @@ export default {
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-    <p>Vue Item List</p>
-  </header>
-
+  <nav class="navbar dflex-justify-center">
+    <div class="dflex dflex-col">
+      <div class="bold font-lg">Software Construction</div>
+      <div class="dflex dflex-gap-sm">
+        <div>
+          Made (not) with Rust!
+        </div>
+        ·
+        <div>
+          Assignment 1
+        </div>
+      </div>
+    </div>
+    <div class="dflex dflex-row dflex-gap-md">
+      <a href="https://grostaco.github.io/SoftwareConstruction">Home</a>
+      <a href="https://github.com/grostaco">GitHub</a>
+      <a href="https://grostaco.herokuapp.com/">About Me</a>
+      <a href="https://github.com/grostaco/SoftwareConstruction">This site's code</a>
+    </div>
+  </nav>
+  <div class="divider"></div>
   <main>
     <ItemList/>
   </main>
 </template>
 
 <style scoped>
-header {
-  line-height: 1.5;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
+main {
+  margin-top: 2.5rem;
 }
 </style>
