@@ -9,7 +9,7 @@ pub fn nav() -> Html {
             <div class="dflex dflex-row dflex-gap-md">
                 <a href="#">{{"Home"}}</a>
                 <a href="https://github.com/grostaco">{{"GitHub"}}</a>
-                <a href="https://https://grostaco.herokuapp.com/">{{"About Me"}}</a>
+                <a href="https://grostaco.herokuapp.com/">{{"About Me"}}</a>
                 <a href="https://github.com/grostaco/SoftwareConstruction">{{"This site's code"}}</a>
             </div>
         </nav>
