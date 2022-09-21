@@ -2,6 +2,7 @@ use yew::{function_component, html};
 use yew_hooks::{use_async_with_options, UseAsyncOptions};
 
 use crate::services::assignment::get_assignments;
+use super::Loading;
 
 #[function_component(AppList)]
 pub fn app_list() -> Html {
@@ -49,7 +50,7 @@ pub fn app_list() -> Html {
                 { for assignments }
             } else {
                 <div>
-                    {{"Loading..."}}
+                    <Loading/>
                 </div>
             }
         </main>
