@@ -7,15 +7,13 @@ pub fn loading() -> Html {
     {
         let counter = counter.clone();
         use_effect(move || {
-            Timeout::new(500, move || {
+            Timeout::new(300, move || {
                 counter.set(*counter + 1);
             })
             .forget();
             || ()
         });
     }
-
-    let counter = counter;
 
     html! {
         <p>{format!("Loading{}", ".".repeat((*counter % 4) as usize))}</p>
